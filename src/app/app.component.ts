@@ -6,6 +6,8 @@ import { CreateModalComponent } from './components/create-modal/create-modal.com
 import { ModalService } from './services/modal.service';
 import { CommonModule } from '@angular/common';
 import { TaskModalComponent } from './components/task-modal/task-modal.component';
+import { AppHeaderComponent } from './components/app-header/app-header.component';
+import { EditModalComponent } from './edit-modal/edit-modal.component';
 
 @Component({
     selector: 'app-root',
@@ -14,7 +16,7 @@ import { TaskModalComponent } from './components/task-modal/task-modal.component
     styleUrl: './app.component.css',
     imports: [
       RouterOutlet, CommonModule, KanbanBoardComponent, DeleteModalComponent, 
-      CreateModalComponent, TaskModalComponent
+      CreateModalComponent, TaskModalComponent, AppHeaderComponent, EditModalComponent
     ]
 })
 export class AppComponent {
