@@ -4,16 +4,21 @@ import { CommonModule } from '@angular/common';
 import { Task } from '../interfaces/task.model';
 import { ModalService } from '../services/modal.service';
 import { TaskService } from '../services/task.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+
+
 
 @Component({
   selector: 'app-edit-modal',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FontAwesomeModule],
   templateUrl: './edit-modal.component.html',
   styleUrl: './edit-modal.component.css'
 })
 export class EditModalComponent {
  
+  faTimes = faTimes;
 
   constructor(private fb: FormBuilder, private _modalService: ModalService, private _taskService: TaskService) {}
 
@@ -29,6 +34,10 @@ export class EditModalComponent {
         this._modalService.closeModal();
       });
     }
+  }
+
+  dismiss(){
+    this._modalService.closeModal();
   }
 
   ngOnInit() {
