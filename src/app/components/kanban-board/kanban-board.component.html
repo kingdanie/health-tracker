@@ -1,1 +1,30 @@
-<p>kanban-board works!</p>
+
+<div class="kanban-board flex gap-2" cdkDropListGroup>
+    <div class="kanban-column" id="openTasks" cdkDropList [cdkDropListData]="openTasks" (cdkDropListDropped)="drop($event)">
+      <h2 class="uppercase text-gray-700 font-semibold">Open</h2>
+      <div class="kanban-task" *ngFor="let task of openTasks" cdkDrag>
+        <app-task [task]="task"></app-task>
+      </div>
+    </div>
+  
+    <div class="kanban-column" id="pendingTasks" cdkDropList [cdkDropListData]="pendingTasks" (cdkDropListDropped)="drop($event)">
+      <h2 class="uppercase text-blue-700 font-semibold">Pending</h2>
+      <div class="kanban-task" *ngFor="let task of pendingTasks" cdkDrag>
+        <app-task [task]="task"></app-task>
+      </div>
+    </div>
+  
+    <div class="kanban-column" id="inProgressTasks" cdkDropList [cdkDropListData]="inProgressTasks" (cdkDropListDropped)="drop($event)">
+      <h2 class="uppercase text-yellow-600 font-semibold">In Progress</h2>
+      <div class="kanban-task" *ngFor="let task of inProgressTasks" cdkDrag>
+        <app-task [task]="task"></app-task>
+      </div>
+    </div>
+  
+    <div class="kanban-column" id="completedTasks" cdkDropList [cdkDropListData]="completedTasks" (cdkDropListDropped)="drop($event)">
+      <h2 class="uppercase text-green-700 font-semibold">Completed</h2>
+      <div class="kanban-task" *ngFor="let task of completedTasks" cdkDrag>
+        <app-task [task]="task"></app-task>
+      </div>
+    </div>
+  </div>
