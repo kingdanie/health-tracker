@@ -1,1 +1,8 @@
-<p>task works!</p>
+<!-- task.component.html -->
+
+<div class="task bg-slate-200 shadow p-5 my-3 cursor-grab" (click)="viewTask(task)">
+    <h3 class="font-bold">{{ task.title }}</h3>
+    <p>{{ task.description }}</p>
+    <p>Due Date: {{ task.dueDate  }}</p>
+  </div>
+  
