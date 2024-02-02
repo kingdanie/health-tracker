@@ -1,5 +1,6 @@
 # HealthTracker
 
+![healthtracker](https://github.com/kingdanie/health-tracker/assets/52611355/9be9b2e1-0b1b-4a98-9e8e-47ed5d10fc64)
 
 This application is built using tailwindcss, Angular and Json server as mock api backend.
 
