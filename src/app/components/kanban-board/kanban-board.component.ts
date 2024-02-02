@@ -34,10 +34,10 @@ export class KanbanBoardComponent {
   loadTasks(): void {
     this.taskService.getTasks().subscribe(tasks => {
       // Filter tasks into different arrays based on status
-      this.openTasks = tasks.filter(task => task.status === 'Open').slice(0, 5); // Display the first 5 tasks
-      this.pendingTasks = tasks.filter(task => task.status === 'Pending').slice(0, 5);
-      this.inProgressTasks = tasks.filter(task => task.status === 'In Progress').slice(0, 5);
-      this.completedTasks = tasks.filter(task => task.status === 'Completed').slice(0, 5);
+      this.openTasks = tasks.filter(task => task.status === 'Open'); // Display the first 5 tasks
+      this.pendingTasks = tasks.filter(task => task.status === 'Pending');
+      this.inProgressTasks = tasks.filter(task => task.status === 'In Progress');
+      this.completedTasks = tasks.filter(task => task.status === 'Completed');
     });
   }
 
